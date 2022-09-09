@@ -4,21 +4,21 @@ constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    int *b = new int[NELEMENTS]; //sintax error
-    std::cout << '1-100 ertekek duplazasa' //missing code
-    for (int i = 0;) //wrong for sintax
+    int *b = new int[N_ELEMENTS]; 
+    std::cout << "1-100 ertekek duplazasa" << std::endl;
+    for (int i = 0;i <= N_ELEMENTS;i++)
     {
-        b[i] = i * 2; //logic error
+        b[i] = (i+1) * 2;
     }
-    for (int i = 0; i; i++) //missing code
+    for (int i = 0; i< N_ELEMENTS; i++)
     {
-        std::cout << "Ertek:" //missing code
+        std::cout << "Ertek:" << b[i] << std::endl;
     }    
     std::cout << "Atlag szamitasa: " << std::endl;
     int atlag;
-    for (int i = 0; i < N_ELEMENTS, i++)
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
-        atlag += b[i] //missing comma
+        atlag += b[i];
     }
     atlag /= N_ELEMENTS;
     std::cout << "Atlag: " << atlag << std::endl;
